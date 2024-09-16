@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:,regular,700,900&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #000000;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.-container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0px 15px 0px 15px;
+}
+
+/*------------------HEADER-------------------*/
+.header__container {
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 400;
+  color: #1c1c1c;
+}
+.header__logo {
+  padding: 10px 0px 10px 30px;
+}
+.header__menu {
+  padding: 10px;
+}
+.header__buttons {
+  padding-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 38px;
+}
+.header__button:hover {
+  text-decoration: underline;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 42px;
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 13px 34px;
+  background-color: #6f2cff;
+  border-radius: 20px;
+  transition: all 800ms ease;
+}
+.button:hover {
+  text-decoration: none;
+  background-color: rgba(133, 77, 253, 0.9176470588);
+}
