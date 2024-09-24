@@ -366,9 +366,8 @@ body {
 
 /*------------------main-info-end-------------------*/
 /*------------------services-start-------------------*/
-.services {
-  background-color: #00514f;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23daccc9' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+.services__container {
+  margin-bottom: 50px;
 }
 .services__header {
   display: flex;
@@ -379,7 +378,7 @@ body {
   text-align: center;
 }
 .services__header-title {
-  color: #D9D9D9;
+  color: #0e1111;
   font-size: 36px;
   font-weight: bold;
   line-height: 127.7777777778%;
@@ -394,363 +393,85 @@ body {
     font-size: 26px;
   }
 }
-.services__main-list {
+.services__cards-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-.family-law__item:nth-child(2) > .family-law-info-body {
-  max-width: 100%;
-  border-radius: 10px;
-}
-.family-law__item:nth-child(2) > .family-law-info-body::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #F7EFED;
-  top: -20px;
-  left: 25%;
-  z-index: 2;
-}
-@media (max-width: 1199.98px) {
-  .family-law__item:nth-child(2) > .family-law-info-body::before {
-    left: 50%;
+@media (max-width: 768px) {
+  .services__cards-container {
+    justify-content: center;
   }
 }
-.family-law__item:nth-child(3) > .family-law-info-body {
-  margin-left: auto;
+.services__card {
+  width: 100%;
+  max-width: 360px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px 4px rgba(34, 34, 150, 0.2);
+  overflow: hidden;
+  text-align: center;
 }
-.family-law__item:nth-child(3) > .family-law-info-body::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #F7EFED;
-  top: -20px;
-  left: 25%;
-  z-index: 2;
+.services__card-img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.family-law__item:nth-child(3) > .family-law-info-body::after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #F7EFED;
-  top: 100%;
-  left: 25%;
-  z-index: 2;
-}
-.family-law__item:nth-child(4) > .family-law-info-body {
-  border-radius: 0 10px 10px 0;
-}
-.family-law__item:nth-child(5) > .family-law-info-body {
-  margin-left: auto;
-}
-.family-law__item:nth-child(5) > .family-law-info-body::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #F7EFED;
-  top: -20px;
-  left: 25%;
-  z-index: 2;
-}
-.family-law__item:nth-child(5) > .family-law-info-body::after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #F7EFED;
-  top: 100%;
-  left: 25%;
-  z-index: 2;
-}
-.family-law__item:nth-child(6) > .family-law-info-body {
-  max-width: 100%;
-  border-radius: 10px 10px 10px 10px;
-}
-.family-law__item:not(:first-child) {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-@media (max-width: 849.98px) {
-  .family-law__item:not(:first-child) {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-@media (max-width: 749.98px) {
-  .family-law__item:not(:first-child) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-.family-law__item:first-child {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1199.98px) {
-  .family-law__item:first-child {
-    flex-direction: column;
-  }
-}
-.family-law__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-.family-law__info-body {
-  padding: 30px;
-  background-color: #F7EFED;
-  border-radius: 10px 0px 0px 10px;
-  max-width: 620px;
-}
-.family-law__img-body {
-  padding: 10px 10px 10px 0px;
-  background-color: #F7EFED;
-  border-radius: 0px 10px 10px 0px;
-  position: relative;
-}
-@media (max-width: 1199.98px) {
-  .family-law__img-body {
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 80%;
-  }
-}
-.family-law__img {
-  max-width: 100%;
-  border-radius: 0px 10px 10px 0px;
-}
-@media (max-width: 1199.98px) {
-  .family-law__img {
-    border-radius: 10px;
-  }
-}
-
-.main-info-body {
-  padding: 40px 50px 40px 50px;
-  border-radius: 0px 10px 10px 0px;
-  max-width: 720px;
-}
-@media (max-width: 1199.98px) {
-  .main-info-body {
-    max-width: 100%;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  .main-info-body:before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #F7EFED;
-    bottom: -20px;
-    left: 50%;
-    z-index: 2;
-  }
-}
-.main-info-body__main-title {
-  font-size: 34px;
-  color: #00514F;
-  font-weight: 500;
-  text-decoration: underline;
-  margin-bottom: 10px;
-}
-@media (max-width: 959.98px) {
-  .main-info-body__main-title {
-    font-size: 28px;
-  }
-}
-@media (max-width: 767.98px) {
-  .main-info-body__main-title {
-    font-size: 26px;
-  }
-}
-.main-info-body__main-sub-title {
-  font-size: 24px;
-  color: #00514F;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.main-info-body__main-sub-title_bold {
+.services__card-text {
+  padding: 20px 15px;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 1.5;
+  color: #333;
 }
-@media (max-width: 959.98px) {
-  .main-info-body__main-sub-title {
-    font-size: 22px;
-  }
-}
-@media (max-width: 767.98px) {
-  .main-info-body__main-sub-title {
-    font-size: 20px;
-  }
-}
-.main-info-body__main-text {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 155.5555555556%;
-}
-@media (max-width: 959.98px) {
-  .main-info-body__main-text {
-    font-size: 16px;
-  }
-}
-.family-law-info-body {
-  padding: 30px 30px 30px 30px;
-  position: relative;
-}
-.family-law-info-body__title {
-  color: #00514F;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 155.5555555556%;
-  margin-bottom: 10px;
-}
-@media (max-width: 959.98px) {
-  .family-law-info-body__title {
-    font-size: 16px;
-  }
-}
-.family-law-info-body__item {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 155.5555555556%;
-  font-size: 16px;
-}
-.family-law-info-body__item:not(:last-child) {
-  padding-bottom: 5px;
-}
-.family-law-info-body__main-title {
-  font-size: 24px;
-  color: #00514F;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-@media (max-width: 959.98px) {
-  .family-law-info-body__main-title {
-    font-size: 22px;
-  }
-}
-@media (max-width: 767.98px) {
-  .family-law-info-body__main-title {
-    font-size: 20px;
-  }
-}
-.family-law-info-body__main-sub-title {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 140%;
-  margin-bottom: 15px;
-}
-@media (max-width: 959.98px) {
-  .family-law-info-body__main-sub-title {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767.98px) {
-  .family-law-info-body__main-sub-title {
-    font-size: 16px;
-  }
-}
-
-.real-estate {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.real-estate__item:first-child {
+.services__card-buttons {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
 }
-@media (max-width: 1199.98px) {
-  .real-estate__item:first-child {
-    flex-direction: column-reverse;
+@media (max-width: 389.98px) {
+  .services__card-buttons {
+    flex-direction: column;
+    row-gap: 10px;
   }
 }
-.real-estate__img-body {
-  padding: 10px 0px 10px 10px;
-  background-color: #F7EFED;
-  border-radius: 10px 0px 0px 10px;
+.services__card-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #18186C;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-@media (max-width: 1199.98px) {
-  .real-estate__img-body {
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 80%;
-  }
+.services__card-button:first-child {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
 }
-.real-estate__img {
-  max-width: 100%;
-  border-radius: 10px 0px 0px 10px;
+.services__card-button:first-child:hover {
+  background-color: #222296;
+  border-color: #222296;
+  color: white;
 }
-@media (max-width: 1199.98px) {
-  .real-estate__img {
-    border-radius: 10px;
-  }
+.services__card-button:last-child {
+  background-color: #222296;
+  border: 2px solid #222296;
+  color: white;
 }
-.real-estate__info-body {
-  padding: 30px;
-  background-color: #F7EFED;
-  border-radius: 10px 0px 0px 10px;
-}
-.real-estate__info-body > .main-info-body__main-title {
-  font-size: 34px;
-  color: #00514F;
-  font-weight: 500;
-  text-decoration: underline;
-  margin-bottom: 10px;
-}
-@media (max-width: 959.98px) {
-  .real-estate__info-body > .main-info-body__main-title {
-    font-size: 28px;
-  }
-}
-@media (max-width: 767.98px) {
-  .real-estate__info-body > .main-info-body__main-title {
-    font-size: 26px;
-  }
-}
-.real-estate__info-body > .main-info-body__main-sub-title {
-  font-size: 24px;
-  color: #00514F;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-@media (max-width: 959.98px) {
-  .real-estate__info-body > .main-info-body__main-sub-title {
-    font-size: 22px;
-  }
-}
-@media (max-width: 767.98px) {
-  .real-estate__info-body > .main-info-body__main-sub-title {
-    font-size: 20px;
-  }
-}
-.real-estate__info-body > .main-info-body__title {
-  color: #00514F;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 155.5555555556%;
-  margin-bottom: 10px;
-}
-@media (max-width: 959.98px) {
-  .real-estate__info-body > .main-info-body__title {
-    font-size: 16px;
-  }
-}
-.real-estate__info-body > .main-info-body__list > .main-info-body__item {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 155.5555555556%;
-}
-@media (max-width: 959.98px) {
-  .real-estate__info-body > .main-info-body__list > .main-info-body__item {
-    font-size: 16px;
-  }
-}
-.real-estate__info-body > .main-info-body__list > .main-info-body__item:not(:last-child) {
-  padding-bottom: 5px;
+.services__card-button:last-child:hover {
+  background-color: white;
+  border-color: #222296;
+  color: #222296;
 }
 
+/*------------------services-start-------------------*/
+/*------------------services-start--------------OLD-----*/
 /*------------------services-end-------------------*/
 /*------------------production-and-delivery-------------------*/
 .main-content__production-and-delivery {
