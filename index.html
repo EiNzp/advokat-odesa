@@ -13,7 +13,25 @@
 
 <body>
     <div class="wrapper">
-       
+        <header class="header">
+            <!-- <div class="header__container -container">
+                <a href="index.html" class="header__logo logo">
+                    <H2 class="logo__item">АТЕЛЬЄ МЕБЛІВ</H2>
+                </a>
+                <div class="header__menu menu">
+                    <button type="button" class="menu__icon-button"><span></span></button>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#catalog" class="menu__link">Ми виготовляємо</a></li>
+                            <li class="menu__item"><a href="#reviews" class="menu__link">Відгуки</a></li>
+                            <li class="menu__item"><a href="#contacs" class="menu__link">Контакти</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+                <a href="tel:+380976581717" class="header__phone">+38 (097) 658-17-17</a>
+            </div> -->
+        </header>
 
         <div class="main-content">
             <div class="main-content__main-info main-info">
@@ -47,7 +65,8 @@
                             <img src="img/cards/1.jpg" alt="Картинка 1" class="services__card-img">
                             <p class="services__card-text">Сімейне право</p>
                             <div class="services__card-buttons">
-                                <button class="services__card-button">Детальніше</button>
+                                <button class="services__card-button services__details-btn"
+                                    data-modal="modal1">Детальніше</button>
                                 <button class="services__card-button">Отримати консультацію</button>
                             </div>
                         </div>
@@ -55,7 +74,8 @@
                             <img src="img/cards/2.jpg" alt="Картинка 2" class="services__card-img">
                             <p class="services__card-text">Вирішення спорів щодо нерухомості</p>
                             <div class="services__card-buttons">
-                                <button class="services__card-button">Детальніше</button>
+                                <button class="services__card-button services__details-btn"
+                                    data-modal="modal2">Детальніше</button>
                                 <button class="services__card-button">Отримати консультацію</button>
                             </div>
                         </div>
@@ -63,7 +83,8 @@
                             <img src="img/cards/3.jpg" alt="Картинка 3" class="services__card-img">
                             <p class="services__card-text">ДТП</p>
                             <div class="services__card-buttons">
-                                <button class="services__card-button">Детальніше</button>
+                                <button class="services__card-button services__details-btn"
+                                    data-modal="modal3">Детальніше</button>
                                 <button class="services__card-button">Отримати консультацію</button>
                             </div>
                         </div>
@@ -71,7 +92,8 @@
                             <img src="img/cards/4.jpg" alt="Картинка 4" class="services__card-img">
                             <p class="services__card-text">Цивільні справи</p>
                             <div class="services__card-buttons">
-                                <button class="services__card-button">Детальніше</button>
+                                <button class="services__card-button services__details-btn"
+                                    data-modal="modal4">Детальніше</button>
                                 <button class="services__card-button">Отримати консультацію</button>
                             </div>
                         </div>
@@ -79,23 +101,377 @@
                             <img src="img/cards/5.jpg" alt="Картинка 5" class="services__card-img">
                             <p class="services__card-text">Кримінальні справи</p>
                             <div class="services__card-buttons">
-                                <button class="services__card-button">Детальніше</button>
+                                <button class="services__card-button services__details-btn"
+                                    data-modal="modal5">Детальніше</button>
                                 <button class="services__card-button">Отримати консультацію</button>
                             </div>
                         </div>
                         <!-- Добавьте больше карточек по аналогии -->
                     </div>
+
+                    <div id="modal1" class="services__modal">
+                        <div class="services__modal-content">
+                            <div class="services__modal-header">
+                                <button class="services__services-btn">Інші послуги</button>
+                                <button class="services__close-btn">×</button>
+                            </div>
+                            <div class="services__modal-body">
+                                <img src="img/cards/1.jpg" alt="Картинка 1" class="services__modal-img">
+                                <div class="services__modal-text">
+                                    <h2 class="services__modal-title">Адвокат з сімейного права</h2>
+                                    <button class="services__consult-btn">Отримати консультацію</button>
+                                    <p class="services__modal-info">З метою запобігання погіршення сімейних відносин,
+                                        вирішення проблемних питань мирним та правовим шляхом адвокати АБ «ТРІУМФ»
+                                        надають громадянам України та іноземним громадянам слідуючий спектр послуг з
+                                        Сімейного права.</p>
+                                </div>
+                                <div class="services__modal-full-width-text modal-main-info">
+                                    <!-- <p class="services__modal-full-width-text-info">Этот текст будет занимать всю ширину
+                                        экрана. Вы можете добавить здесь больше
+                                        информации, и она будет растягиваться на всю доступную ширину после картинки.
+                                    </p>
+                                    <p class="services__modal-full-width-text-info">Дополнительный текст, который будет
+                                        продолжать заполнять модальное окно. Это
+                                        позволит пользователю прокручивать окно вниз, если контента много.</p> -->
+                                    <p class="modal-main-info__sub-title">Наші юристи та адвокати допоможуть Вам (у
+                                        ваших
+                                        інтересах) укласти законодавчо
+                                        обґрунтовані договори:</p>
+                                    <p class="modal-main-info__info">- шлюбний договір, договір про розмір аліментів на
+                                        утримання дитини(дітей),
+                                        договір про те, з ким буде проживати дитина(діти) після припинення шлюбу та ін.
+                                    </p>
+                                    <h2 class="modal-main-info__title">Позовні заяви до суду:</h2>
+                                    <p class="modal-main-info__sub-title">(проведемо збір необхідних документів та
+                                        складемо в Ваших інтересах якісні
+                                        позови)</p>
+                                    <h3 class="modal-main-info__list-title">ЩОДО ШЛЮБУ:</h3>
+                                    <ul class="modal-main-info__list">
+                                        <li class="modal-main-info__list-item">•Розірвання шлюбу;</li>
+                                        <li class="modal-main-info__list-item">•Визнання шлюбу недійсним;</li>
+                                        <li class="modal-main-info__list-item">•Припинення шлюбу;</li>
+                                        <li class="modal-main-info__list-item">•Визнання сімейних договорів недійсними;
+                                        </li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів.</li>
+                                    </ul>
+                                    <h3 class="modal-main-info__list-title">СТЯГНЕННЯ АЛІМЕНТІВ ПО КОНКРЕТНІЙ СИТУАЦІЇ:
+                                    </h3>
+                                    <ul class="modal-main-info__list">
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів при вагітності
+                                            дружини та припинення такого стягнення;
+                                        </li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів на утримання дитини
+                                            та припиненння такого стягнення;
+                                        </li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів на дружину
+                                            (чоловіка)
+                                            при проживанні з нею (з ним)
+                                            дитини до досягнення дитиною 3 років та припинення такого стягнення;</li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів на утримання одного
+                                            з
+                                            подружжя та припинення такого
+                                            стягнення;</li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів на дружину
+                                            (чоловіка)
+                                            при проживанні з нею (з ним)
+                                            дитини-інваліда та припинення такого стягнення;</li>
+                                        <li class="modal-main-info__list-item">•Стягнення аліментів на батьків та
+                                            припинення такого стягнення;</li>
+                                    </ul>
+                                    <h3 class="modal-main-info__list-title">РОЗПОДІЛ ВЛАСНОСТІ ПОДРУЖЖЯ:</h3>
+                                    <ul class="modal-main-info__list">
+                                        <li class="modal-main-info__list-item">•Визнання майна спільною сумісною
+                                            власністю подружжя;</li>
+                                        <li class="modal-main-info__list-item">•Визнання майна приватною власністю
+                                            дружини (чоловіка);</li>
+                                        <li class="modal-main-info__list-item">•Поділ спільної сумісної власності
+                                            подружжя;</li>
+                                        <li class="modal-main-info__list-item">•Встановлення режиму окремого проживання
+                                            подружжя;</li>
+                                        <li class="modal-main-info__list-item">•Встановлення факту проживання однією
+                                            сім´єю;</li>
+                                        <li class="modal-main-info__list-item">•Встановлення та оспорювання батьківства;
+                                        </li>
+                                        <li class="modal-main-info__list-item">•Встановлення та оспорювання материнства;
+                                        </li>
+                                        <li class="modal-main-info__list-item">•Визнання та позбавлення батьківських
+                                            прав;</li>
+                                        <li class="modal-main-info__list-item">•Відшкодування матеріальної та моральної
+                                            шкоди;</li>
+                                        <li class="modal-main-info__list-item">•Визначення місця проживання дитини;</li>
+                                        <li class="modal-main-info__list-item">•Визначення порядку участі одного з
+                                            батьків у вихованні дитини при окремому
+                                            проживанні та ін.</li>
+                                        <li>Збереження і захист сімейних активів.</li>
+                                    </ul>
+                                    <h3 class="modal-main-info__list-title">ЗАХИСТИМО ВАС І ВАШИХ ДІТЕЙ ВІД НАСИЛЛЯ ТА
+                                        ВАШУ ВЛАСНІСТЬ ВІД ЗЛОЧИНЦІВ.</h3>
+                                    <ul class="modal-main-info__list">
+                                        <li class="modal-main-info__list-item">- Направимо в ваших інтересах заяви до
+                                            правоохоронних органів України(
+                                            поліції, прокуратури, ДБР, СБУ) щодо порушення кримінальних проваджень
+                                            (внесення повідомлень про злочин до ЄРДР України);</li>
+                                        <li class="modal-main-info__list-item">- Захистимо Вас та представимо ваші
+                                            інтереси на стадії досудового слідства у
+                                            правоохоронних органах України; </li>
+                                        <li class="modal-main-info__list-item">- складемо та направимо до суду цивільний
+                                            позов у межах кримінального
+                                            провадження щодо відшкодування вам моральних та матеріальних збитків;</li>
+                                        <li class="modal-main-info__list-item">- Захистимо вас та представимо ваші
+                                            інтереси у суді на стадії судового
+                                            слідства та апеляційного чи касаційного провадження.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="modal2" class="services__modal">
+                        <div class="services__modal-content">
+                            <div class="services__modal-header">
+                                <button class="services__services-btn">Інші послуги</button>
+                                <button class="services__close-btn">×</button>
+                            </div>
+                            <div class="services__modal-body">
+                                <img src="img/cards/2.jpg" alt="Картинка 2" class="services__modal-img">
+                                <div class="services__modal-text">
+                                    <h2 class="services__modal-title">Заголовок 2</h2>
+                                    <button class="services__consult-btn">Отримати консультацію</button>
+                                    <p class="services__modal-info">Это текст для модального окна карточки 2. Картинка
+                                        находится справа. Текст будет
+                                        обтекать картинку и дальше продолжаться по ширине окна.</p>
+                                </div>
+                                <div class="services__modal-full-width-text">
+                                    <p class="services__modal-full-width-text-info">Этот текст будет занимать всю ширину
+                                        экрана. Вы можете добавить здесь больше
+                                        информации, и она будет растягиваться на всю доступную ширину после картинки.
+                                    </p>
+                                    <p class="services__modal-full-width-text-info">Дополнительный текст, который будет
+                                        продолжать заполнять модальное окно. Это
+                                        позволит пользователю прокручивать окно вниз, если контента много.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="modal3" class="services__modal">
+                        <div class="services__modal-content">
+                            <div class="services__modal-header">
+                                <button class="services__services-btn">Інші послуги</button>
+                                <button class="services__close-btn">×</button>
+                            </div>
+                            <div class="services__modal-body">
+                                <img src="img/cards/3.jpg" alt="Картинка 3" class="services__modal-img">
+                                <div class="services__modal-text">
+                                    <h2 class="services__modal-title">Заголовок 3</h2>
+                                    <button class="services__consult-btn">Отримати консультацію</button>
+                                    <p class="services__modal-info">Это текст для модального окна карточки 3. Картинка
+                                        находится справа. Текст будет
+                                        обтекать картинку и дальше продолжаться по ширине окна.</p>
+                                </div>
+                                <div class="services__modal-full-width-text">
+                                    <p class="services__modal-full-width-text-info">Этот текст будет занимать всю ширину
+                                        экрана. Вы можете добавить здесь больше
+                                        информации, и она будет растягиваться на всю доступную ширину после картинки.
+                                    </p>
+                                    <p class="services__modal-full-width-text-info">Дополнительный текст, который будет
+                                        продолжать заполнять модальное окно. Это
+                                        позволит пользователю прокручивать окно вниз, если контента много.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <!--  -->
 
-          
-            
+            <!-- <div class="main-content__services services" id="services">
+                <div class="services -container">
+                    <div class="services__header">
+                        <h2 class="services__header-title">ПОСЛУГИ НАШОГО БЮРО</h2>
+                    </div>
+
+                    <ul class="services__main-list">
+                        <li class="services__main-item family-law">
+                            <ul class="family-law__list">
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body main-info-body">
+                                        <h3 class="main-info-body__main-title">Адвокат з сімейного права</h3>
+                                        <p class="main-info-body__main-sub-title">МИ ЗАВЖДИ <span
+                                                class="main-info-body__main-sub-title_bold">ПЕРЕМОГАЄМО!</span></p>
+                                        <p class="main-info-body__main-text">Як засвідчено з давніх часів, сім’я це Боже
+                                            творіння - єднання двох сердець та чудних плодів. Разом з тим, як показує
+                                            реальне життя, люди піддаючись сатані вчинять гріхи і псують свої добрі
+                                            стосунки. Через непримиримість та свої горді характери причинять собі та
+                                            дітям великі проблеми.
+                                            <br><br>
+                                            Разом з тим, всі розуміємо, що кожна сімейна справа індивідуальна.
+                                            <br><br>
+                                            З метою запобігання погіршення сімейних відносин, вирішення проблемних
+                                            питань мирним та правовим шляхом адвокати АБ «ТРІУМФ» надають громадянам
+                                            України та іноземним громадянам слідуючий спектр послуг з Сімейного права.
+                                        </p>
+                                    </div>
+                                    <div class="family-law__img-body">
+                                        <img src="img/services-of-our-office/photo_2024-09-14_13-44-15.jpg" alt=""
+                                            class="family-law__img">
+                                    </div>
+                                </li>
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body family-law-info-body">
+                                        <h5 class="family-law-info-body__title">Наші юристи та адвокати допоможуть Вам
+                                            (у ваших інтересах) укласти законодавчо обґрунтовані договори:</h5>
+                                        <ul class="family-law-info-body__list">
+                                            <li class="family-law-info-body__item">шлюбний договір</li>
+                                            <li class="family-law-info-body__item">договір про розмір аліментів на
+                                                утримання дитини(дітей)</li>
+                                            <li class="family-law-info-body__item">договір про те, з ким буде проживати
+                                                дитина(діти) після припинення шлюбу та ін.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body family-law-info-body">
+                                        <h4 class="family-law-info-body__main-title">Позовні заяви до суду</h4>
+                                        <p class="family-law-info-body__main-sub-title">проведемо збір необхідних
+                                            документів та складемо в Ваших інтересах якісні позови</p>
+                                        <h5 class="family-law-info-body__title">ЩОДО ШЛЮБУ:</h5>
+                                        <ul class="family-law-info-body__list">
+                                            <li class="family-law-info-body__item">Розірвання шлюбу;</li>
+                                            <li class="family-law-info-body__item">Визнання шлюбу недійсним;</li>
+                                            <li class="family-law-info-body__item">Припинення шлюбу;</li>
+                                            <li class="family-law-info-body__item">Визнання сімейних договорів
+                                                недійсними;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body family-law-info-body">
+                                        <h5 class="family-law-info-body__title">СТЯГНЕННЯ АЛІМЕНТІВ ПО КОНКРЕТНІЙ
+                                            СИТУАЦІЇ:</h5>
+                                        <ul class="family-law-info-body__list">
+                                            <li class="family-law-info-body__item">Стягнення аліментів при вагітності
+                                                дружини та припинення такого
+                                                стягнення;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів на утримання
+                                                дитини та припиненння такого стягнення;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів на дружину
+                                                (чоловіка) при проживанні з нею (з ним) дитини до досягнення дитиною 3
+                                                років та припинення такого стягнення;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів на утримання
+                                                одного з подружжя та припинення такого стягнення;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів на дружину
+                                                (чоловіка) при проживанні з нею (з ним) дитини-інваліда та припинення
+                                                такого стягнення;</li>
+                                            <li class="family-law-info-body__item">Стягнення аліментів на батьків та
+                                                припинення такого стягнення;</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body family-law-info-body">
+                                        <h5 class="family-law-info-body__title">РОЗПОДІЛ ВЛАСНОСТІ ПОДРУЖЖЯ:</h5>
+                                        <ul class="family-law-info-body__list">
+                                            <li class="family-law-info-body__item">Визнання майна спільною сумісною
+                                                власністю подружжя;</li>
+                                            <li class="family-law-info-body__item">Визнання майна приватною власністю
+                                                дружини (чоловіка);</li>
+                                            <li class="family-law-info-body__item">Поділ спільної сумісної власності
+                                                подружжя;</li>
+                                            <li class="family-law-info-body__item">Встановлення режиму окремого
+                                                проживання подружжя;</li>
+                                            <li class="family-law-info-body__item">Встановлення факту проживання однією
+                                                сім´єю;</li>
+                                            <li class="family-law-info-body__item">Встановлення та оспорювання
+                                                батьківства;</li>
+                                            <li class="family-law-info-body__item">Встановлення та оспорювання
+                                                материнства;</li>
+                                            <li class="family-law-info-body__item">Визнання та позбавлення батьківських
+                                                прав;</li>
+                                            <li class="family-law-info-body__item">Відшкодування матеріальної та
+                                                моральної шкоди;</li>
+                                            <li class="family-law-info-body__item">Визначення місця проживання дитини;
+                                            </li>
+                                            <li class="family-law-info-body__item">Визначення порядку участі одного з
+                                                батьків у вихованні дитини при окремому проживанні та ін.</li>
+                                            <li class="family-law-info-body__item">Збереження і захист сімейних активів.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="family-law__item">
+                                    <div class="family-law__info-body family-law-info-body family-law-info-body_last">
+                                        <h5 class="family-law-info-body__title">ЗАХИСТИМО ВАС І ВАШИХ ДІТЕЙ ВІД НАСИЛЛЯ
+                                            ТА ВАШУ ВЛАСНІСТЬ ВІД ЗЛОЧИНЦІВ</h5>
+                                        <ul class="family-law-info-body__list">
+                                            <li class="family-law-info-body__item">Направимо в ваших інтересах заяви до
+                                                правоохоронних органів України( поліції, прокуратури, ДБР, СБУ) щодо
+                                                порушення кримінальних проваджень (внесення повідомлень про злочин до
+                                                ЄРДР України);</li>
+                                            <li class="family-law-info-body__item">Захистимо Вас та представимо ваші
+                                                інтереси на стадії досудового слідства у правоохоронних органах України;
+                                            </li>
+                                            <li class="family-law-info-body__item">Складемо та направимо до суду
+                                                цивільний позов у межах кримінального провадження щодо відшкодування вам
+                                                моральних та матеріальних збитків;</li>
+                                            <li class="family-law-info-body__item">Захистимо вас та представимо ваші
+                                                інтереси у суді на стадії судового слідства та апеляційного чи
+                                                касаційного провадження.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services__main-item real-estate">
+                            <ul class="real-estate__list">
+                                <li class="real-estate__item">
+                                    <div class="real-estate__img-body">
+                                        <img src="img/services-of-our-office/photo_2024-09-14_17-09-44.jpg" alt=""
+                                            class="real-estate__img">
+                                    </div>
+                                    <div class="real-estate__info-body main-info-body">
+                                        <h4 class="main-info-body__main-title">Вирішення спорів щодо нерухомості та
+                                            землі в м.Одесі та Одеській області</h4>
+                                        <p class="main-info-body__main-sub-title">Захистимо вас від помилок, невірних
+                                            дій (без дій), від шахраїв та державних органів, збережемо ваші кошти та
+                                            здоров’я.</p>
+
+
+                                        <h5 class="main-info-body__title">РЕЗУЛЬТАТИВНО ДЛЯ ВАС ЗДІЙСНЕМО:</h5>
+                                        <ul class="main-info-body__list">
+                                            <li class="main-info-body__item">Надійний супровід адвоката всіх етапів
+                                                купівлі - продажу квартир, будинків, земельних ділянок;</li>
+                                            <li class="main-info-body__item">Визнання права власності на спірне майно;
+                                            </li>
+                                            <li class="main-info-body__item">Виділення частини із спірного майна;</li>
+                                            <li class="main-info-body__item">Розділ спірного майна, на вигідних для вас
+                                            </li>
+                                            <li class="main-info-body__item">Поновлення договору оренди землі;</li>
+                                            <li class="main-info-body__item">Узаконення самочинного будівництва;</li>
+                                            <li class="main-info-body__item">Оскарження дій/бездіяльності ( протоколів,
+                                                постанов, наказів ) державних органів;</li>
+                                            <li class="main-info-body__item">Визнання договорів купівлі - продажу,
+                                                дарування оренди, дійсними/недійсними;</li>
+                                            <li class="main-info-body__item">Вирішення інших спорів по землі і
+                                                нерухомості.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <!--  -->
+
 
         </div>
         <footer class="footer">
-            
+
         </footer>
     </div>
 
