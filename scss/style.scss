@@ -306,7 +306,8 @@ body {
 
 .main-info {
 
-    background-image: url(../img/main-info/background.jpg);
+    // background-image: url(../img/main-info/background.jpg);
+    background-color: #222296;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -589,12 +590,205 @@ body {
         //     background-color: #222296;
         // }
     }
+
+    &__modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: flex-start;
+        /* Выравнивание по верхнему краю */
+        z-index: 9999;
+        overflow-y: auto;
+        /* Обеспечивает прокрутку, если контент выходит за пределы окна */
+    }
+
+    &__show {
+        display: flex;
+        /* Показываем модальное окно, когда добавлен класс show */
+    }
+
+    &__modal-content {
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        /* Окно занимает всю ширину экрана */
+        min-width: 100vw;
+        /* Минимальная ширина всегда на всю ширину экрана */
+        max-width: 1000px;
+        /* Максимальная ширина контента */
+        border-radius: 8px;
+        position: relative;
+        min-height: 100vh;
+        /* Модальное окно всегда занимает всю высоту экрана */
+        box-sizing: border-box;
+        overflow-y: auto;
+        /* Прокрутка модального окна, если контент выходит за пределы */
+    }
+
+    &__modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        /* Закрепляем заголовок сверху при прокрутке */
+        top: 0;
+        background-color: white;
+        /* Фон заголовка модального окна */
+        z-index: 10;
+        padding-bottom: 10px;
+    }
+
+    &__close-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    &__services-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #333;
+    }
+
+    &__modal-body {
+        display: block;
+        /* Сброс flex, чтобы информация и картинка были независимыми */
+        padding-bottom: 20px;
+
+        // @media (max-width: 768px) {
+        //     & {
+        //         flex-direction: column;
+        //     }
+        // }
+    }
+
+    &__modal-text {
+        overflow: hidden;
+
+        font-size: 18px;
+        line-height: 1.5;
+        /* Это позволяет тексту обтекать картинку */
+
+        @media (min-width: 768px) {
+            display: inline;
+        }
+
+        @media (max-width: 768px) {
+            & {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__modal-title {
+        margin-bottom: 10px;
+
+        font-size: 24px;
+    }
+
+    &__consult-btn {
+        background-color: #222296;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 10px;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    &__modal-info {}
+
+    &__modal-img {
+        max-width: 460px;
+        max-height: 256px;
+        object-fit: cover;
+        float: left;
+        /* Картинка выравнивается слева */
+        margin-right: 20px;
+        /* Отступ справа от картинки */
+
+        @media (max-width: 768px) {
+            & {
+                float: none;
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    &__modal-full-width-text {
+        clear: both;
+        /* Очищает float */
+        width: 100%;
+        /* Текст на всю ширину экрана */
+        padding-top: 20px;
+        /* Отступ сверху после картинки */
+
+
+        @media (max-width: 768px) {
+            & {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    &__modal-full-width-text-info {}
 }
 
 .-container {}
 
+.modal-main-info {
+
+    &__sub-title {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    &__info {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-size: 24px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__list-title {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 10px;
+        text-decoration: underline;
+    }
+
+    &__list {}
+
+    &__list-item {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
 
 /*------------------services-start-------------------*/
+
 
 
 /*------------------services-start--------------OLD-----*/
