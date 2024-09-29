@@ -77,6 +77,72 @@ document.addEventListener('DOMContentLoaded', function () {
 // Модальные окна услуг КОНЕЦ
 
 
+// слайдер swiper-certificates-slider НАЧАЛО
+
+// const swiper1 = new Swiper('.mySwiperOne');
+
+
+var swiperOne = new Swiper(".mySwiperOne", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  // centeredSlides: true, // Центрировать текущий слайд
+  navigation: {
+    nextEl: ".mySwiperOne__swiper-button-next",
+    prevEl: ".mySwiperOne__swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiperTwo,
+  },
+});
+var swiperTwo = new Swiper(".mySwiperTwo", {
+  // loop: true,
+  spaceBetween: 10,
+  slidesPerView: 2,
+  freeMode: true,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,
+});
+
+swiperOne.thumbs.swiper = swiperTwo;
+swiperTwo.on('click', (swiper, e) => {
+  const clickedIndex = swiper.clickedIndex; // Получаем индекс кликнутого слайда
+  if (clickedIndex !== undefined) {
+    swiperOne.slideTo(clickedIndex); // Переключаемся на соответствующий слайд основного слайдера
+  }
+});
+
+
+
+const modal = document.getElementById("certificates__modal-image");
+const modalImage = document.getElementById("certificates__modal-content");
+const closeModal = document.getElementById("certificates__modal-close");
+
+document.querySelectorAll('.mySwiperOne__slide img').forEach(image => {
+  image.addEventListener('click', () => {
+    modal.style.display = "flex"; // Показываем модальное окно
+    modalImage.src = image.src; // Устанавливаем источник изображения
+
+    document.body.classList.add('body_lock'); // Блокируем скролл страницы
+  });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = "none"; // Скрываем модальное окно
+
+  document.body.classList.remove('body_lock'); // Возвращаем скролл страницы
+});
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none"; // Скрываем модальное окно
+
+    document.body.classList.remove('body_lock'); // Возвращаем скролл страницы
+  }
+});
+// слайдер swiper-certificates-slider КОНЕЦ
+
+
 // открытие формы
 // window.onload = function() {
 const popupForm = document.querySelector('.popup-form');
@@ -212,6 +278,8 @@ document.addEventListener('keydown', function (e) {
   if (e.which === 27) {
     popupThankyou.classList.add("popup-thankyou_disable");
     document.body.classList.remove('body_lock');
+
+    modal.style.display = "none";
   }
 })
 
@@ -225,47 +293,47 @@ document.addEventListener('keydown', function (e) {
 
 
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  // loop: true,
-  slidesPerView: 2,
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 10
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 1.15,
-      spaceBetween: 30
-    },
-    900: {
-      slidesPerView: 2.15,
-      spaceBetween: 30
-    }
-  },
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'horizontal',
+//   // loop: true,
+//   slidesPerView: 2,
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1,
+//       spaceBetween: 10
+//     },
+//     // when window width is >= 480px
+//     480: {
+//       slidesPerView: 1,
+//       spaceBetween: 10
+//     },
+//     // when window width is >= 640px
+//     640: {
+//       slidesPerView: 1.15,
+//       spaceBetween: 30
+//     },
+//     900: {
+//       slidesPerView: 2.15,
+//       spaceBetween: 30
+//     }
+//   },
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
 
-    clickable: true,
+//     clickable: true,
 
-    dynamicBullets: true,
-  },
+//     dynamicBullets: true,
+//   },
 
-  grabCursor: true,
+//   grabCursor: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
 
 
-});
+// });

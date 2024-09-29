@@ -405,6 +405,124 @@ body {
 /*------------------main-info-end-------------------*/
 
 
+/*------------------main-block-START-------------------*/
+
+.main-block {
+
+    &__main-block {
+        background-color: #222296;
+
+    }
+
+    &__container {}
+
+    &__body {
+        display: flex;
+        background-color: #222296; // Фоновый цвет для всего блока
+        color: white; // Цвет текста
+        height: auto; // Высота блока задается контентом
+        min-height: 300px; // Например, минимальная высота, если нужно
+        overflow: hidden; // Обрезаем лишние части
+
+        margin-top: 60px;
+
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column; // Меняем направление для мобильных устройств
+                text-align: center;
+                align-items: center;
+            }
+        }
+    }
+
+    &__image-container {
+        flex: 1; // Картинка занимает одну часть от двух
+        max-width: 38%; // Ограничиваем максимальную ширину
+        height: 100%; // Занимает полную высоту родительского блока .main-block
+
+
+
+        @media (max-width: 768px) {
+            & {
+                max-width: 100%; // На мобильных устройствах картинка занимает всю ширину
+                height: auto; // Высота изменяется в зависимости от ширины
+            }
+        }
+    }
+
+    &__img-item {
+        width: auto;
+        height: 100%; // Картинка занимает 100% высоты контейнера
+        object-fit: cover; // Картинка сохраняет пропорции
+        display: block;
+
+    }
+
+    &__text-container {
+        flex: 1; // Текст занимает оставшуюся часть
+        display: flex;
+        align-items: center; // Вертикальное выравнивание текста по центру
+        justify-content: center; // Горизонтальное выравнивание текста по центру
+        padding: 20px;
+        text-align: center; // Выравнивание текста по центру
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 1.4;
+
+
+
+        // font-size: 38px;
+        // line-height: calc(52 / 42 * 100%);
+        font-family: "Yeseva One", serif;
+        font-weight: 400;
+        font-style: normal;
+
+        // 
+        background-image: repeating-linear-gradient(to right, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #be8c3c 67%, #b17b32 77%, #bb8332 83%, #d4a245 88%, #e1b453 93%, #a4692a 100%);
+        background-size: 150%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+
+
+        filter: drop-shadow(0 0 1px rgba(255, 200, 0, .3));
+        animation: MoveBackgroundPosition 6s ease-in-out infinite;
+        text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.4);
+
+        @keyframes MoveBackgroundPosition {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @media (max-width: 768px) {
+            & {
+                // font-size: 24px; // Уменьшаем размер шрифта на мобильных
+            }
+        }
+    }
+}
+
+.-container {}
+
+
+/*------------------main-block-END-------------------*/
+
+
+
+
+
 /*------------------services-start-------------------*/
 
 .main-content {
@@ -609,6 +727,7 @@ body {
 
     &__show {
         display: flex;
+        overflow-x: hidden;
         /* Показываем модальное окно, когда добавлен класс show */
     }
 
@@ -654,7 +773,7 @@ body {
     &__services-btn {
         background-color: transparent;
         border: none;
-        font-size: 16px;
+        font-size: 14px;
         text-decoration: underline;
         cursor: pointer;
         color: #333;
@@ -755,6 +874,13 @@ body {
 
 .modal-main-info {
 
+    &__modal-title {
+        margin-top: 15px;
+
+        font-size: 24px;
+        text-align: center;
+    }
+
     &__sub-title {
         font-size: 20px;
         line-height: 1.5;
@@ -764,6 +890,13 @@ body {
     &__info {
         font-size: 18px;
         line-height: 1.5;
+
+
+        &_accent {
+            font-weight: 500;
+            font-size: 20px;
+            color: red;
+        }
     }
 
     &__title {
@@ -777,6 +910,11 @@ body {
         line-height: 1.5;
         margin-top: 10px;
         text-decoration: underline;
+
+        &_no-underline {
+
+            text-decoration: none;
+        }
     }
 
     &__list {}
@@ -784,10 +922,219 @@ body {
     &__list-item {
         font-size: 18px;
         line-height: 1.5;
+        // list-style: disc;
+        margin-left: 25px;
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+            content: '';
+            /* Создаем псевдоэлемент */
+            position: absolute;
+            left: 0;
+            top: 11px;
+            /* Устанавливаем по центру высоты */
+            transform: translateY(-50%);
+            /* Центруем по вертикали */
+            width: 8px;
+            /* Ширина маркера */
+            height: 8px;
+            /* Высота маркера */
+            border-radius: 50%;
+            /* Делаем маркер круглым */
+            background-color: #222296;
+            /* Цвет маркера */
+        }
     }
 }
 
-/*------------------services-start-------------------*/
+/*------------------services-END-------------------*/
+
+
+/*------------------certificates-start-------------------*/
+
+.main-content {
+
+    &__certificates {}
+}
+
+.certificates {
+
+    &__container {}
+
+    &__modal {
+        display: none;
+        /* Скрыто по умолчанию */
+        position: fixed;
+        /* Позиционируем фиксированно */
+        z-index: 1000;
+        /* На переднем плане */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Полная ширина */
+        height: 100%;
+        /* Полная высота */
+        overflow: auto;
+        /* Добавляем прокрутку при необходимости */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Темный фон с прозрачностью */
+    }
+
+    &__modal-close {
+        position: absolute;
+        /* Позиционируем закрывающий элемент */
+        top: 20px;
+        right: 35px;
+        color: #fff;
+        /* Цвет крестика */
+        font-size: 30px;
+        /* Размер крестика */
+        font-weight: 400;
+        /* Жирный шрифт */
+        cursor: pointer;
+        /* Указатель при наведении */
+    }
+
+    &__modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        /* Максимальная ширина изображения */
+        max-height: 90%;
+        /* Максимальная высота изображения */
+    }
+}
+
+.-container {}
+
+.swiper {}
+
+.mySwiperOne {
+    position: relative;
+
+    /* Для позиционирования кнопок */
+    &__wrapper {
+        max-height: 450px;
+    }
+
+    &__slide {
+        max-height: 450px;
+        display: flex;
+        justify-content: center;
+
+        & img {
+            max-height: 400px;
+            object-fit: cover;
+
+            @media (max-width: 599.98px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__swiper-button-next {
+        cursor: pointer;
+        position: absolute;
+        /* Позиционируем кнопки абсолютно */
+        top: 50%;
+        /* Центрируем по вертикали */
+        transform: translateY(-50%);
+        /* Корректируем центрирование */
+        width: 30px;
+        /* Ширина кнопок */
+        height: 30px;
+        /* Высота кнопок */
+        color: #fff;
+        /* Цвет кнопок */
+        z-index: 10;
+        /* Убедитесь, что кнопки выше других элементов */
+
+        right: 10px;
+        /* Положение кнопки "Далее" */
+
+        @media (max-width: 599.98px) {
+            right: 0px;
+        }
+
+        width: 30px;
+        height: 30px;
+
+        & img {
+            width: 100%;
+            height: 80%;
+        }
+    }
+
+    &__swiper-button-prev {
+        cursor: pointer;
+        position: absolute;
+        /* Позиционируем кнопки абсолютно */
+        top: 50%;
+        /* Центрируем по вертикали */
+        transform: translateY(-50%);
+        /* Корректируем центрирование */
+        width: 30px;
+        /* Ширина кнопок */
+        height: 30px;
+        /* Высота кнопок */
+        color: #fff;
+        /* Цвет кнопок */
+        z-index: 10;
+        /* Убедитесь, что кнопки выше других элементов */
+
+        left: 10px;
+        /* Положение кнопки "Назад" */
+
+        @media (max-width: 599.98px) {
+            left: 0px;
+        }
+
+        width: 30px;
+        height: 30px;
+
+        & img {
+            width: 100%;
+            height: 80%;
+        }
+    }
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.mySwiperTwo {
+
+    margin-top: 20px;
+
+    @media (max-width: 599.98px) {
+        margin-top: 10px;
+    }
+
+    &__wrapper {
+        justify-content: center;
+    }
+
+
+    &__slide {
+        width: 12% !important;
+
+        display: flex;
+
+        @media (max-width: 599.98px) {
+            width: 20% !important;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+
+/*------------------certificates-END-------------------*/
+
 
 
 
@@ -2532,164 +2879,164 @@ body {
 
 /*------------------reviews-------------------*/
 
-.main-content {
-    &__reviews {
-        background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0.87), hsla(0, 0%, 8%, 0.87)),
-            url(../img/reviews/otzyvy_back.jpg);
-        background-position: 0 0, 0 0;
-        background-size: auto, cover;
-    }
-}
+// .main-content {
+//     &__reviews {
+//         background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0.87), hsla(0, 0%, 8%, 0.87)),
+//             url(../img/reviews/otzyvy_back.jpg);
+//         background-position: 0 0, 0 0;
+//         background-size: auto, cover;
+//     }
+// }
 
-.reviews {
-    @media (max-width: 450.98px) {
-        & {
-            height: 700px;
-        }
-    }
+// .reviews {
+//     @media (max-width: 450.98px) {
+//         & {
+//             height: 700px;
+//         }
+//     }
 
-    @media (max-width: 374.98px) {
-        & {
-            height: 750px;
-        }
-    }
+//     @media (max-width: 374.98px) {
+//         & {
+//             height: 750px;
+//         }
+//     }
 
-    @media (max-width: 349.98px) {
-        & {
-            height: 800px;
-        }
-    }
+//     @media (max-width: 349.98px) {
+//         & {
+//             height: 800px;
+//         }
+//     }
 
-    &__container {
-        height: 750px;
-        display: flex;
-        flex-direction: column;
-        row-gap: 35px;
-        align-items: center;
-    }
+//     &__container {
+//         height: 750px;
+//         display: flex;
+//         flex-direction: column;
+//         row-gap: 35px;
+//         align-items: center;
+//     }
 
-    &__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 60px 0 40px 0;
-        text-align: center;
-    }
+//     &__header {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 20px;
+//         padding: 60px 0 40px 0;
+//         text-align: center;
+//     }
 
-    &__header-title {
-        color: #fff;
-        font-size: 35px;
-        line-height: calc(40 / 35 * 100%);
-        font-weight: 400;
-        position: relative;
+//     &__header-title {
+//         color: #fff;
+//         font-size: 35px;
+//         line-height: calc(40 / 35 * 100%);
+//         font-weight: 400;
+//         position: relative;
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100px;
-            height: 2px;
-            bottom: -5px;
-            left: 12%;
-            background-image: linear-gradient(180deg, #9ce9ea, #9ce9ea);
-        }
-    }
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: 100px;
+//             height: 2px;
+//             bottom: -5px;
+//             left: 12%;
+//             background-image: linear-gradient(180deg, #9ce9ea, #9ce9ea);
+//         }
+//     }
 
-    &__header-text {
-        color: #fff;
-        font-size: 20px;
-        font-style: italic;
-    }
+//     &__header-text {
+//         color: #fff;
+//         font-size: 20px;
+//         font-style: italic;
+//     }
 
-    &__swiper {}
+//     &__swiper {}
 
-    &__button {
-        display: inline-block;
-        padding: 10px 50px;
-        // background-color: #9ce9ea;
-        background-color: #79b4b5;
-        color: #000000;
-        font-size: 15px;
-        font-weight: 400;
-        border: 0;
-        line-height: inherit;
-        cursor: pointer;
-        border-radius: 0;
-        margin-top: 40px;
+//     &__button {
+//         display: inline-block;
+//         padding: 10px 50px;
+//         // background-color: #9ce9ea;
+//         background-color: #79b4b5;
+//         color: #000000;
+//         font-size: 15px;
+//         font-weight: 400;
+//         border: 0;
+//         line-height: inherit;
+//         cursor: pointer;
+//         border-radius: 0;
+//         margin-top: 40px;
 
-        &:hover {
-            background-image: linear-gradient(rgb(245, 212, 95), rgb(245, 212, 95));
-        }
+//         &:hover {
+//             background-image: linear-gradient(rgb(245, 212, 95), rgb(245, 212, 95));
+//         }
 
-        @media (max-width: 766.98px) {
-            & {
-                font-size: 14px;
-            }
-        }
+//         @media (max-width: 766.98px) {
+//             & {
+//                 font-size: 14px;
+//             }
+//         }
 
-        @media (max-width: 478.98px) {
-            & {
-                padding: 10px 30px;
-            }
-        }
-    }
-}
+//         @media (max-width: 478.98px) {
+//             & {
+//                 padding: 10px 30px;
+//             }
+//         }
+//     }
+// }
 
-.-container {}
+// .-container {}
 
-.swiper {
-    width: 100%;
-    min-height: auto;
-    border-radius: 5px;
+// .swiper {
+//     width: 100%;
+//     min-height: auto;
+//     border-radius: 5px;
 
-    &__header {
-        margin-bottom: 30px;
-    }
+//     &__header {
+//         margin-bottom: 30px;
+//     }
 
-    &__title {
-        color: #9ce9ea;
-        font-size: 15px;
-        line-height: calc(17 / 15 * 100%);
-    }
+//     &__title {
+//         color: #9ce9ea;
+//         font-size: 15px;
+//         line-height: calc(17 / 15 * 100%);
+//     }
 
-    &__text {
-        color: #fff;
-        font-size: 15px;
-        line-height: calc(21 / 15 * 100%);
-        letter-spacing: 0.04em;
-    }
-}
+//     &__text {
+//         color: #fff;
+//         font-size: 15px;
+//         line-height: calc(21 / 15 * 100%);
+//         letter-spacing: 0.04em;
+//     }
+// }
 
-.swiper-wrapper {}
+// .swiper-wrapper {}
 
-.swiper-slide {
-    background-color: #5d5d5d;
-    padding: 40px 80px;
-    border-radius: 5px;
-    height: auto;
+// .swiper-slide {
+//     background-color: #5d5d5d;
+//     padding: 40px 80px;
+//     border-radius: 5px;
+//     height: auto;
 
-    @media (max-width: 639.98px) {
-        & {
-            padding: 40px 50px;
-        }
-    }
-}
+//     @media (max-width: 639.98px) {
+//         & {
+//             padding: 40px 50px;
+//         }
+//     }
+// }
 
-.swiper-pagination {}
+// .swiper-pagination {}
 
-.swiper-pagination-bullet {
-    background-color: #fff;
-}
+// .swiper-pagination-bullet {
+//     background-color: #fff;
+// }
 
-.swiper-button-prev {
-    color: #fff;
-}
+// .swiper-button-prev {
+//     color: #fff;
+// }
 
-.swiper-button-next {
-    color: #fff;
-}
+// .swiper-button-next {
+//     color: #fff;
+// }
 
-.swiper-scrollbar {}
+// .swiper-scrollbar {}
 
 /*------------------footer-------------------*/
 
