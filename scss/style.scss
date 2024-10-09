@@ -405,14 +405,13 @@ body {
 /*------------------main-info-end-------------------*/
 
 
+
 /*------------------main-block-START-------------------*/
 
 .main-block {
 
-    &__main-block {
-        background-color: #222296;
+    background-color: #222296;
 
-    }
 
     &__container {}
 
@@ -1149,7 +1148,10 @@ body {
 }
 
 .about-us {
+
+    background-color: #222296;
     margin-top: 50px;
+    padding-top: 30px;
 
     &__container {}
 

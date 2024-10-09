@@ -366,7 +366,7 @@ body {
 
 /*------------------main-info-end-------------------*/
 /*------------------main-block-START-------------------*/
-.main-block__main-block {
+.main-block {
   background-color: #222296;
 }
 .main-block__body {
@@ -888,7 +888,9 @@ body {
 /*------------------certificates-END-------------------*/
 /*------------------about-us-START-------------------*/
 .about-us {
+  background-color: #222296;
   margin-top: 50px;
+  padding-top: 30px;
 }
 .about-us__list {
   display: flex;
