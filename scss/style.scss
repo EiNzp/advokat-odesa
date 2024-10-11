@@ -1160,6 +1160,7 @@ body {
     &__list {
         display: flex;
         column-gap: 10px;
+        color: white;
 
         @media (max-width: 991.98px) {
             flex-wrap: wrap;
@@ -1280,6 +1281,103 @@ body {
 
 
 /*------------------about-us-END-------------------*/
+
+
+
+/*------------------text-block-START-------------------*/
+
+.main-content {
+
+    &__text-block {}
+}
+
+.text-block {
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__container {}
+
+    &__content {
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &__centered-title {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin: 10px 0;
+        line-height: 1.5;
+        color: #555;
+
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__first-paragraph {
+        /* Отступ для первого абзаца */
+        text-indent: 20px;
+
+    }
+
+    &__phone-number {
+        display: block;
+        text-align: center;
+        font-size: 1.2em;
+        color: #222296;
+        text-decoration: none;
+        margin: 20px 0;
+        font-weight: 600;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            & {
+                text-decoration: underline;
+                color: #007BFF;
+            }
+        }
+    }
+
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    &__left-text {
+        width: 48%;
+        /* Для отступов между текстами */
+        color: #444;
+    }
+
+    &__right-text {
+        width: 48%;
+        /* Для отступов между текстами */
+        color: #444;
+
+        text-align: right;
+    }
+}
+
+.-container {}
+
+
+/*------------------text-block-END-------------------*/
 
 
 
