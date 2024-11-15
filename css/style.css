@@ -964,8 +964,8 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
-.about-us__img-body {
-  max-width: 821px;
+.about-us__img-item {
+  max-width: 281px;
 }
 .about-us__title {
   text-align: center;

@@ -1247,11 +1247,11 @@ body {
         line-height: 1.5;
     }
 
-    &__img-body {
-        max-width: 821px;
-    }
+    &__img-body {}
 
-    &__img-item {}
+    &__img-item {
+        max-width: 281px;
+    }
 
     &__title {
         text-align: center;
