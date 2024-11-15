@@ -1247,7 +1247,9 @@ body {
         line-height: 1.5;
     }
 
-    &__img-body {}
+    &__img-body {
+        max-width: 821px;
+    }
 
     &__img-item {}
 
