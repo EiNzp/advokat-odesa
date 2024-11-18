@@ -995,6 +995,9 @@ body {
   line-height: 1.5;
   padding: 0 10px;
 }
+.about-us__info-subt {
+  text-align: center;
+}
 
 /*------------------about-us-END-------------------*/
 /*------------------text-block-START-------------------*/
