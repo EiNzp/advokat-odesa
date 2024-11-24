@@ -736,6 +736,127 @@ body {
 }
 
 /*------------------services-END-------------------*/
+/*------------------about-me-start-------------------*/
+.main-content__about-me {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.about-me__body {
+  padding: 20px;
+}
+.about-me__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0 20px 0;
+  text-align: center;
+}
+.about-me__header-title {
+  color: #0e1111;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 127.7777777778%;
+}
+@media (max-width: 959.98px) {
+  .about-me__header-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-me__header-title {
+    font-size: 26px;
+  }
+}
+.about-me__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .about-me__content {
+    flex-direction: column;
+  }
+}
+.about-me__left {
+  flex: 1 1 40%;
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .about-me__left {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 599.98px) {
+  .about-me__left {
+    max-width: 80%;
+  }
+}
+@media (max-width: 449.98px) {
+  .about-me__left {
+    max-width: 100%;
+  }
+}
+.about-me__photo {
+  max-width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .about-me__photo {
+    max-width: 80%;
+  }
+}
+.about-me__right {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-me__subtitle {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+.about-me__subheading {
+  font-size: 22px;
+  color: #666;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+.about-me__text {
+  font-size: 18px;
+  line-height: 1.5;
+  text-indent: 20px;
+  font-weight: 500;
+}
+.about-me__list {
+  padding-left: 20px;
+}
+.about-me__item {
+  font-size: 18px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+}
+.about-me__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 2px;
+  background-color: #222296;
+}
+
+/*------------------about-me-END-------------------*/
 /*------------------certificates-start-------------------*/
 .certificates__modal {
   display: none;
