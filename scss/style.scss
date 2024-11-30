@@ -7,6 +7,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Yeseva+One:regular&display=swap);
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Roboto";
     // font-family: "Yantramanav";
@@ -50,7 +54,7 @@ body {
     min-width: 100%;
     // padding: 10px 0;
     z-index: 50;
-    background: #5d5d5d;
+    background: white;
 
     &__container {
         min-height: 60px;
@@ -102,9 +106,10 @@ body {
     }
 
     &__phone {
-        color: #fff;
+        color: #222296;
         text-decoration: underline;
         text-decoration-color: rgba(28, 28, 28, 0);
+        font-weight: 600;
 
         &:hover {
             transition: text-decoration-color ease 1s;
@@ -130,7 +135,7 @@ body {
     z-index: 5;
 
     &__item {
-        color: #6beaeb;
+        color: #222296;
         font-weight: 900;
         font-size: 20px;
     }
@@ -148,7 +153,7 @@ body {
                 width: 30px;
                 height: 24px;
                 cursor: pointer;
-                background-color: #5d5d5d;
+                background-color: white;
 
                 &::before,
                 &::after,
@@ -158,7 +163,7 @@ body {
                     height: 10%;
                     width: 100%;
                     transition: all 600ms ease;
-                    background-color: #fff;
+                    background-color: #222296;
                 }
 
                 &::before,
@@ -219,7 +224,7 @@ body {
                     top: 0;
                     left: 0;
                     height: 60px;
-                    background-color: #5d5d5d;
+                    background-color: white;
                 }
 
                 &_active {
@@ -253,10 +258,10 @@ body {
     &__item {}
 
     &__link {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 16px;
         line-height: calc(16 / 14 * 100%);
-        color: #fff;
+        color: #222296;
         text-decoration: underline;
         text-decoration-color: rgba(28, 28, 28, 0);
 
@@ -972,7 +977,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        padding: 30px 0 40px 0;
+        padding: 60px 0 40px 0;
         text-align: center;
     }
 
@@ -1108,7 +1113,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        padding: 30px 0 40px 0;
+        padding: 60px 0 40px 0;
         text-align: center;
     }
 

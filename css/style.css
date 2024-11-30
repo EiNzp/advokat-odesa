@@ -78,6 +78,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto";
   font-weight: 400;
@@ -114,7 +118,7 @@ body {
   position: fixed;
   min-width: 100%;
   z-index: 50;
-  background: #5d5d5d;
+  background: white;
 }
 .header__container {
   min-height: 60px;
@@ -156,9 +160,10 @@ body {
   }
 }
 .header__phone {
-  color: #fff;
+  color: #222296;
   text-decoration: underline;
   text-decoration-color: rgba(28, 28, 28, 0);
+  font-weight: 600;
 }
 .header__phone:hover {
   transition: text-decoration-color ease 1s;
@@ -180,7 +185,7 @@ body {
   z-index: 5;
 }
 .logo__item {
-  color: #6beaeb;
+  color: #222296;
   font-weight: 900;
   font-size: 20px;
 }
@@ -196,7 +201,7 @@ body {
     width: 30px;
     height: 24px;
     cursor: pointer;
-    background-color: #5d5d5d;
+    background-color: white;
   }
   .menu__icon-button::before, .menu__icon-button::after, .menu__icon-button > span {
     left: 0;
@@ -204,7 +209,7 @@ body {
     height: 10%;
     width: 100%;
     transition: all 600ms ease;
-    background-color: #fff;
+    background-color: #222296;
   }
   .menu__icon-button::before, .menu__icon-button::after {
     content: "";
@@ -250,7 +255,7 @@ body {
     top: 0;
     left: 0;
     height: 60px;
-    background-color: #5d5d5d;
+    background-color: white;
   }
   .menu__body_active {
     top: 0;
@@ -277,10 +282,10 @@ body {
   }
 }
 .menu__link {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 114.2857142857%;
-  color: #fff;
+  color: #222296;
   text-decoration: underline;
   text-decoration-color: rgba(28, 28, 28, 0);
 }
@@ -746,7 +751,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 30px 0 40px 0;
+  padding: 60px 0 40px 0;
   text-align: center;
 }
 .our-team__header-title {
@@ -845,7 +850,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 30px 0 40px 0;
+  padding: 60px 0 40px 0;
   text-align: center;
 }
 .about-me__header-title {
