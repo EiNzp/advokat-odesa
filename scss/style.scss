@@ -90,7 +90,8 @@ body {
     }
 
     &__menu {
-        margin-left: auto;
+        // margin-left: auto;
+        margin-left: 0;
 
         @media (max-width: 1399.98px) {
             & {
@@ -123,7 +124,7 @@ body {
             }
         }
 
-        @media (max-width: 439.98px) {
+        @media (max-width: 549.98px) {
             & {
                 display: none;
             }
@@ -138,6 +139,18 @@ body {
         color: #222296;
         font-weight: 900;
         font-size: 20px;
+
+        @media (max-width: 379.98px) {
+            & {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 329.98px) {
+            & {
+                font-size: 16px;
+            }
+        }
     }
 }
 
