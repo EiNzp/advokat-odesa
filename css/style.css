@@ -812,6 +812,15 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+/* ------------------------------------- */
+
+.team-card__photo:nth-child(2){
+      object-position: top;
+}
+
+/* ------------------------------------- */
+
+
 @media (max-width: 480px) {
   .team-card__photo {
     height: 270px;
