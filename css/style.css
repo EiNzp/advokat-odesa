@@ -814,7 +814,7 @@ body {
 }
 /* ------------------------------------- */
 
-.team-card__photo:nth-child(2){
+#our-team > div > div.our-team__team-cards > div:nth-child(2) > img{
       object-position: top;
 }
 
