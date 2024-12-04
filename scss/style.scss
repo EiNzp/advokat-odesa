@@ -1050,7 +1050,9 @@ body {
         }
     }
 
-
+    &:nth-child(2) img {
+        object-position: top;
+    }
 
     &__photo {
         width: 100%;
